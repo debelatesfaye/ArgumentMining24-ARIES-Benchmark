@@ -1,0 +1,34 @@
+{
+    "configurations": [
+
+
+
+      {
+        "task": "sequence_classification",
+        "transformers": [
+          {"type": "encoder", "models": "FacebookAI/roberta-base"},
+          {"type": "decoder", "models": "microsoft/DialoGPT-medium"},
+
+          {"type": "encode-decoder", "models": "google-t5/t5-small"}
+        ]
+      },
+      {
+        "task": "sequence_alignment",
+        "transformers": [
+          {"type": "encode-decoder", "models": "google-t5/t5-small"}          
+        ]
+      },
+      {
+        "task": "token_classification",
+        "transformers": [
+          {"type": "encoder", "models": "FacebookAI/roberta-base"}, 
+          {"type": "decoder", "models": "microsoft/DialoGPT-medium"},
+         
+          {"type": "encode-decoder", "models": "google-t5/t5-small"}
+          
+        ]
+      }
+
+    ]
+  }
+  

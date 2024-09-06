@@ -6,25 +6,25 @@
       {
         "task": "sequence_classification",
         "transformers": [
-          {"type": "encoder", "models": "FacebookAI/roberta-base"},
+          {"type": "encoder", "models": "FacebookAI/roberta-large"},
           {"type": "decoder", "models": "microsoft/DialoGPT-medium"},
 
-          {"type": "encode-decoder", "models": "google-t5/t5-small"}
+          {"type": "encode-decoder", "models": "google-t5/t5-base"}
         ]
       },
       {
         "task": "sequence_alignment",
         "transformers": [
-          {"type": "encode-decoder", "models": "google-t5/t5-small"}          
+          {"type": "encode-decoder", "models": "google-t5/t5-base"}          
         ]
       },
       {
         "task": "token_classification",
         "transformers": [
-          {"type": "encoder", "models": "FacebookAI/roberta-base"}, 
+          {"type": "encoder", "models": "FacebookAI/roberta-large"}, 
           {"type": "decoder", "models": "microsoft/DialoGPT-medium"},
          
-          {"type": "encode-decoder", "models": "google-t5/t5-small"}
+          {"type": "encode-decoder", "models": "google-t5/t5-base"}
           
         ]
       }
